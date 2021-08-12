@@ -35,7 +35,7 @@ public class EmployeeService {
         //restTemplet is in the main class
 
         Department dep =
-                restTemplate.getForObject("http://localhost:9001/api/v1/departments/" + emp.getDepartmentId()
+                restTemplate.getForObject("http://DEPARTMENT-SERVICE/api/v1/departments/" + emp.getDepartmentId()
                         , Department.class);
 
         ResponseTempletVO vo = new ResponseTempletVO();
@@ -53,7 +53,7 @@ public class EmployeeService {
         Department dep ;
 
         for (Employee emp : emps ) {
-           dep = restTemplate.getForObject("http://localhost:9001/api/v1/departments/" + emp.getDepartmentId()
+           dep = restTemplate.getForObject("http://DEPARTMENT-SERVICE/api/v1/departments/" + emp.getDepartmentId()
                     , Department.class);
 
             vo.setEmployee(emp);
