@@ -28,7 +28,7 @@ public class DepartmentService {
 
     public void deleteDepartment(Long departmentId) {
 
-        //to do return true if succeeded 
+        //to do return true if succeeded
         departmentRepository.deleteById(departmentId);
     }
 }

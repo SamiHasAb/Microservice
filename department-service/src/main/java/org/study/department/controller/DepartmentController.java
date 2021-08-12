@@ -5,22 +5,20 @@ import org.springframework.web.bind.annotation.*;
 import org.study.department.model.Department;
 import org.study.department.service.DepartmentService;
 
-@RestController
-@RequestMapping("api/v1/departments")
+@RequestMapping("/api/v1/departments")
 @AllArgsConstructor
+@RestController
 public class DepartmentController {
     private final DepartmentService departmentService;
 
     @PostMapping("/")
     public Department addOrUpdateDepartment(@RequestBody Department department) {
 
-
         return departmentService.saveDepartment(department);
     }
 
     @GetMapping("/{id}")
     public Department findDepartmentById(@PathVariable("id") Long departmentId ){
-
 
         return departmentService.findDepartmentById(departmentId);
     }
