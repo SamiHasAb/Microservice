@@ -8,5 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/SamiHasAb/config-server-repository
+          uri: https://github.com/SamiHasAb/config-server-repository.git
           clone-on-start: true
+
+          default-label: main
