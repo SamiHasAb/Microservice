@@ -7,6 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="employeeDown" />
+        <module name="cloud-config-server" />
         <module name="department-service" />
         <module name="service-registry" />
         <module name="cloud-gateway" />
@@ -14,17 +16,21 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-config-server" target="11" />
       <module name="cloud-gateway" target="11" />
       <module name="department-service" target="11" />
       <module name="employee-service" target="11" />
+      <module name="employeeDown" target="11" />
       <module name="service-registry" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-config-server" options="-parameters" />
       <module name="cloud-gateway" options="-parameters" />
       <module name="department-service" options="-parameters" />
       <module name="employee-service" options="-parameters" />
+      <module name="employeeDown" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>
   </component>
